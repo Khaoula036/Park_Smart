@@ -76,6 +76,14 @@ class _ParkingDetailsScreenState extends State<ParkingDetailsScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Détails du Parking'),
+        // Ajouter un bouton de retour
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            // Retourner à l'écran des listes des parkings
+            Navigator.push(context, MaterialPageRoute(builder: (context) => const ParkingScreen()));
+          },
+        ),
       ),
       body: Column(
         children: [
