@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:park_smart/liste_screen.dart'; 
+import 'package:park_smart/parkingliste_screen.dart';
 
 
 class SignupScreen extends StatelessWidget {
@@ -40,6 +40,10 @@ class _SignupFormState extends State<SignupForm> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          Container(
+              margin: const EdgeInsets.only(top: 0, bottom: 10), // Ajuster la marge en haut et en bas
+              child: Image.asset('assets/PS_Logo.png', width: 200, height: 200),
+            ),
           TextFormField(
             decoration: const InputDecoration(labelText: 'Prénom'),
             validator: (value) {
@@ -100,9 +104,9 @@ class _SignupFormState extends State<SignupForm> {
           ElevatedButton(
             onPressed: () {
            // Action à effectuer lors de l'appui sur "Sign up"
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const ParkingScreen()));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const ParkingListScreen()));
             },
-            child: const Text('S\'ign up'),
+            child: const Text('Sign up'),
           ),
         ],
       ),

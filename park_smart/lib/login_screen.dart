@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:park_smart/liste_screen.dart';
+import 'package:park_smart/parkingliste_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -26,6 +26,10 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Container(
+              margin: const EdgeInsets.only(top: 0, bottom: 10), // Ajuster la marge en haut et en bas
+              child: Image.asset('assets/PS_Logo.png', width: 200, height: 200),
+            ),
               TextFormField(
                 decoration: const InputDecoration(labelText: 'Email'),
                 keyboardType: TextInputType.emailAddress,
@@ -57,7 +61,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ElevatedButton(
                 onPressed: () {
                 // Action à effectuer lors de l'appui sur "Login"
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const ParkingScreen()));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const ParkingListScreen()));
               },
                 child: const Text('Login'),
               ),

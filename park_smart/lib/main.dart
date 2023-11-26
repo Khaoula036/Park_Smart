@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:park_smart/liste_screen.dart';
-//import 'package:park_smart/details_screen.dart';  
+import 'package:park_smart/home_screen.dart';
 
 void main() {
   runApp(MyApp(key: UniqueKey())); 
@@ -12,9 +11,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: ParkingScreen(),
+      home: HomeScreen(),
     );
   }
 }
 
-//home: HomeScreen()

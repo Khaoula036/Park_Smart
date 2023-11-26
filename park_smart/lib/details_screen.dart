@@ -1,7 +1,8 @@
+/*
 import 'package:flutter/material.dart';
 import 'package:park_smart/database/database_helper.dart'; // Importer le gestionnaire de base de données SQLite
 import 'package:park_smart/models/favorite.dart'; // Importer le modèle pour les favoris
-import 'package:park_smart/liste_screen.dart'; 
+import 'package:park_smart/parkingliste_screen.dart'; 
 
 
 class ParkingDetailsScreen extends StatefulWidget {
@@ -26,7 +27,7 @@ class _ParkingDetailsScreenState extends State<ParkingDetailsScreen> {
   }
 
   void checkFavoriteStatus() async {
-    // Utiliser votre gestionnaire de base de données pour vérifier si le parking est dans les favoris
+    // Utiliser le gestionnaire de base de données pour vérifier si le parking est dans les favoris
     bool isFavoriteParking = await DatabaseHelper.instance.isFavorite(widget.parking.id);
     setState(() {
       isFavorite = isFavoriteParking;
@@ -34,7 +35,7 @@ class _ParkingDetailsScreenState extends State<ParkingDetailsScreen> {
   }
 
   void checkPreferredStatus() async {
-    // Utiliser votre gestionnaire de base de données pour vérifier si le parking est une destination préférée
+    // Utiliser le gestionnaire de base de données pour vérifier si le parking est une destination préférée
     bool isPreferredParking = await DatabaseHelper.instance.isPreferred(widget.parking.id);
     setState(() {
       isPreferred = isPreferredParking;
@@ -48,7 +49,7 @@ class _ParkingDetailsScreenState extends State<ParkingDetailsScreen> {
     } else {
       Favorite favorite = Favorite(
         name: widget.parking.name,
-        //id: widget.parking.id,
+        id: widget.parking.id,
         distance: widget.parking.distance,
         availability: widget.parking.availability,
       );
@@ -105,3 +106,4 @@ class _ParkingDetailsScreenState extends State<ParkingDetailsScreen> {
     );
   }
 }
+*/

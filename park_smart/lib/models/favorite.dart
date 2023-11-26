@@ -1,4 +1,4 @@
-// models/favorite_model.dart
+
 
 class Favorite {
   final String id;
@@ -12,4 +12,14 @@ class Favorite {
     required this.distance,
     required this.availability,
   });
+
+  Map<String, dynamic> toMap() {
+    return {
+      'id': id,
+      'name': name,
+      'distance': distance,
+      'availability': availability,
+      // add other properties as needed
+    };
+  }
 }
