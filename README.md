@@ -1,5 +1,5 @@
 # Park_Smart
-ParkSmart une application qui permette de recommander un parking à un conducteur se rendant à Lille.
+ParkSmart une application qui permet de recommander un parking à un conducteur se rendant à Lille.
 
 
 Les objectifs principaux de ce projet sont :
